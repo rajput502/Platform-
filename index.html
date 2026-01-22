@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="hero">
+    <h1>Welcome to Our Platform</h1>
+    <p>Join now and start your journey.</p>
+
+    <form id="registerForm">
+        <input type="text" id="inviteCode" placeholder="Enter Invite Code" required>
+        <button type="submit">Register</button>
+    </form>
+
+    <p id="note"></p>
+</div>
+
+<script>
+document.getElementById("registerForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    let code = document.getElementById("inviteCode").value;
+    window.location.href = "https://bdg4936.com//#/register?invitationCode=" + encodeURIComponent(code);
+});
+</script>
+
+</body>
+</html>
